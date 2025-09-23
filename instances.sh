@@ -34,8 +34,8 @@ aws route53 change-resource-record-sets \
       "Action"              : "upsert"
       ,"ResourceRecordSet"  : {
         "Name"              : "'$domain_name'"
-        ,"Type"             : "CNAME"
-        ,"TTL"              : 120
+        ,"Type"             : "A"
+        ,"TTL"              : 1
         ,"ResourceRecords"  : [{
             "Value"         : "'$ip'"
         }]
