@@ -22,6 +22,6 @@ record_name=$domain_name
 fi
 
 echo "$instance: $ip"
-echo "$record_name"
+echo "Server_IP:$record_name"
 
 done
