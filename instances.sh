@@ -18,6 +18,6 @@ ip=$(aws ec2 describe-instances --instance-ids $instance 'Reservations[0].Instan
 
 fi
 
-echo "$instance:$ip"
+echo "$instance: $ip"
 
 done
