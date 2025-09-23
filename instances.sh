@@ -10,11 +10,11 @@ instance_id=$(aws ec2 run-instances --image-id $ami_id --instance-type t3.micro 
 
 if [ $instance != "frontend" ]; then
 
-ip=$(aws ec2 describe-instances --instance-ids $instance_id 'Reservations[0].Instances[0].PrivateIpAddress' --output text)
+ip=$(aws ec2 describe-instances --instance-ids $instance_id --query 'Reservations[0].Instances[0].PrivateIpAddress' --output text)
 
 else
 
-ip=$(aws ec2 describe-instances --instance-ids $instance_id 'Reservations[0].Instances[0].PublicIpAddress' --output text)
+ip=$(aws ec2 describe-instances --instance-ids $instance_id --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
 
 fi
 
