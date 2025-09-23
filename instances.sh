@@ -3,6 +3,7 @@
 ami_id="ami-09c813fb71547fc4f"
 sg_id="sg-02704cfa1a0558868"
 domain_name="daws-practice.fun"
+hostedzone_id="Z09770583FTSAJKH9PBLF"
 
 for instance in $@
 do
@@ -23,5 +24,24 @@ fi
 
 echo "$instance: $ip"
 echo "Server_IP:$record_name"
+
+aws route53 change-resource-record-sets \
+  --hosted-zone-id $hostedzone_id \
+  --change-batch '
+  {
+    "Comment": "Testing creating a record set"
+    ,"Changes": [{
+      "Action"              : "upsert"
+      ,"ResourceRecordSet"  : {
+        "Name"              : "'$domain_name'"
+        ,"Type"             : "CNAME"
+        ,"TTL"              : 120
+        ,"ResourceRecords"  : [{
+            "Value"         : "'$ip'"
+        }]
+      }
+    }]
+  }
+  '
 
 done
