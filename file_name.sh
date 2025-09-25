@@ -4,7 +4,7 @@ dir_path=$(pwd)
 
 echo "Directory Path: $dir_path"
 
-file= $( echo $0 | cut -d "." -f1 )
+file=$( echo $0 | cut -d "." -f1 )
 
 echo "File: $file"
 
