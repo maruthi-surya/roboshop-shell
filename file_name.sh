@@ -8,6 +8,6 @@ file=$( echo $0 | cut -d "." -f1 )
 
 echo "File: $file"
 
-file_name=$( $dir_path/$file.log )
+file_name=$( "$dir_path/$file.log" )
 
 echo "File Name: $file_name"
