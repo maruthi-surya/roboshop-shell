@@ -2,7 +2,7 @@
 
 number=$1
 
-if( $number -le 10); then
+if( $number -le 10 ); then
 
   echo "$1 is less or equal to 10"
 
