@@ -1,7 +1,6 @@
 #!/bin/bash
-start_time=$(date)
 
-echo "Start time: $start_time"
+echo "Script started at: $(date))"
 
 number=$1
 
@@ -14,10 +13,6 @@ else
 echo "the given $number is greater than 10"
 fi
 
-end_time=$(date)
-
 echo "End_time: $end_time"
 
-execution_time=$(( $start_time - $end_time ))
-
-echo "Execution Time: $execution_time"
+echo "Script ended at: $(date)"
