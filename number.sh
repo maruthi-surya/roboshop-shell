@@ -1,6 +1,6 @@
 #!/bin/bash
 
-number=$1
+number=$@
 
 if( $number -le 10 ); then
 
