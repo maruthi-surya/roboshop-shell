@@ -9,3 +9,4 @@ if( $number -le 10); then
 else
 
 echo "$1 is greater than 10"
+fi
