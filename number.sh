@@ -1,4 +1,5 @@
 #!/bin/bash
+START_TIME=$(date +%s)
 
 number=$1
 
@@ -10,3 +11,7 @@ else
 
 echo "the given $number is greater than 10"
 fi
+
+end_TIME=$(date +%s)
+
+execution_time=(( $START_TIME - $end_TIME))
