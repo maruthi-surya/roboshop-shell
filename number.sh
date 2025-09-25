@@ -13,6 +13,4 @@ else
 echo "the given $number is greater than 10"
 fi
 
-echo "End_time: $end_time"
-
 echo "Script ended at: $(date)"
