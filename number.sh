@@ -4,7 +4,7 @@ number=$1
 
 if [ $number -le 10 ]; then
 
-  echo "the given $number is less or equal to 10
+  echo "the given $number is less or equal to 10"
 
 else
 
