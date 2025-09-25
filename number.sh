@@ -1,5 +1,5 @@
 #!/bin/bash
-start_time=$(date +%s)
+start_time=$(date)
 
 echo "Start time: $start_time"
 
@@ -14,7 +14,7 @@ else
 echo "the given $number is greater than 10"
 fi
 
-end_time=$(date +%s)
+end_time=$(date)
 
 echo "End_time: $end_time"
 
