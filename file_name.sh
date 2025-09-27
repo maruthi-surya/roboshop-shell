@@ -10,9 +10,7 @@ dest_dir=$(pwd)/dest
   exit 1
 fi
 
-if [ -d $dir ]; then
- echo "directory exists"
-else
+if [ ! -d $dir ]; then
  echo "dircotry doesn't exist"
 fi
 
