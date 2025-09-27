@@ -31,6 +31,9 @@ LOG_FILE="$dir_path/$file-$curr_date.log" # appending filename to the directory
 if [ -f $LOG_FILE ]; then
    echo "files found"
    find $dir_path -name "*.log" -type f | zip -@ -j "$zip_path"
+    if [ -f $zip_path ]; then
+    echo "zip file found"
+    fi
 else
   echo "no files found nothing to archive"
   exit 1
