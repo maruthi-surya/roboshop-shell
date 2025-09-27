@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dir_path=$(pwd)/logs #get the current working directory
+echo "dir-path: $dir_path"
 file_name=$0 #get current file name
  echo "File-Name: $file_name" # echo print the results on the screen
 file=$( echo $0 | cut -d "." -f1 ) # cut command used to cut the stirng based on the delimiter -d
