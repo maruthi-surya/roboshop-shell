@@ -9,7 +9,7 @@ dest_dir=$(pwd)/dest
   echo "dest directory doesn't exist"
   exit 1
 fi
-zip_path==$dest_dir/app-log.zip
+zip_path=="$dest_dir/app-log.zip"
  echo "ZiP-Path: $zip_path"
 
 if [ ! -d $dir ]; then
