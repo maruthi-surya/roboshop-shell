@@ -15,7 +15,7 @@ curr_date=$(date +%+4Y-%m-%d)
   echo "File-Name: $file_name" # echo print the results on the screen
 file=$( echo $0 | cut -d "." -f1 ) # cut command used to cut the stirng based on the delimiter -d
   echo "file: $file"
-LOG_FILE="$dir_path/$file+_$curr_date.log" # appending filename to the directory
+LOG_FILE="$dir_path/$file'_'$curr_date.log" # appending filename to the directory
   echo "Log_File: $LOG_FILE"
   echo "Directory Path: $dir_path" | tee -a $LOG_FILE # tee command writes into the file also display
   echo "File: $file"  &>>$LOG_FILE
