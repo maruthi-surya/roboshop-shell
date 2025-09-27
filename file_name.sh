@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Script execution started: (date)"
+echo "Script execution started: $(date)"
 dir_path=$(pwd)/logs #get the current working directory
    echo "dir-path: $dir_path"
 
