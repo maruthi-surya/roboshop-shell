@@ -4,7 +4,7 @@ echo "Script execution started: $(date)"
 dir_path=$(pwd)/logs #get the current working directory
    echo "dir-path: $dir_path"
 
-dest_dir=$(pwd)/dest
+dest_dir=$(pwd)/dest/app-log-$date.zip
  if [ ! -d $dest_dir ]; then
   echo "dest directory doesn't exist"
   exit 1
@@ -27,7 +27,9 @@ LOG_FILE="$dir_path/$file-$curr_date.log" # appending filename to the directory
   echo "File Name: $LOG_FILE" &>>$LOG_FILE
 
 if [ -f $LOG_FILE ]; then
- echo "file found"
+   echo "no files found"
+   files=(find $dir_path -name "*.log" | zip -@ -j $dest_dir)
 else
- echo "no files found"
+  echo "no files found nothing to archive"
+  exit 1
 fi
