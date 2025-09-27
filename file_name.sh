@@ -17,7 +17,11 @@ file=$( echo $0 | cut -d "." -f1 ) # cut command used to cut the stirng based on
   echo "file: $file"
 LOG_FILE="$dir_path/$file-$curr_date.log" # appending filename to the directory
   echo "Log_File: $LOG_FILE"
-  echo "Directory Path: $dir_path" | tee -a $LOG_FILE # tee command writes into the file also display
-  echo "File: $file"  &>>$LOG_FILE
-  echo "File Name: $LOG_FILE" &>>$LOG_FILE
+  echo "Directory Path: $dir_path" #| tee -a $LOG_FILE # tee command writes into the file also display
+  echo "File: $file"  #&>>$LOG_FILE
+  echo "File Name: $LOG_FILE" #&>>$LOG_FILE
 
+if [ -f $LOG_FILE ]; then
+ echo "file found"
+else
+ echo "no files found"
