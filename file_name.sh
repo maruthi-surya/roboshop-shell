@@ -10,6 +10,7 @@ dest_dir=$(pwd)/dest/
   exit 1
 fi
 zip_path==$dest_dir/app-log.zip
+ echo "ZiP-Path: $zip_path"
 
 if [ ! -d $dir ]; then
  echo "dircotry doesn't exist"
