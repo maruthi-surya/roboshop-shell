@@ -15,3 +15,4 @@ else
  echo "dircotry doesn't exist"
 fi
 curr_date=$(date)
+ echo "Date: $curr_date"
