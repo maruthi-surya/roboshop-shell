@@ -8,7 +8,7 @@ LOG_FILE="$dir_path/$file.log"
 echo "Directory Path: $dir_path" | tee -a $LOG_FILE
 echo "File: $file"  &>>$LOG_FILE
 echo "File Name: $LOG_FILE" &>>$LOG_FILE
-dir="./log"
+dir="./logs"
 if [ -d $dir ]; then
  echo "directory exists"
 else
