@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir_path=$("(pwd)/logs")
+dir_path=$(pwd)
 file_name=$0
  echo "File-Name: $file_name"
 file=$( echo $0 | cut -d "." -f1 )
