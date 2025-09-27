@@ -25,3 +25,4 @@ if [ -f $LOG_FILE ]; then
  echo "file found"
 else
  echo "no files found"
+fi
