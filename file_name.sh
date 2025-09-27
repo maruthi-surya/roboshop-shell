@@ -14,3 +14,4 @@ if [ -d $dir ]; then
 else
  echo "dircotry doesn't exist"
 fi
+curr_date=$(date)
