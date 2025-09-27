@@ -14,5 +14,5 @@ if [ -d $dir ]; then
 else
  echo "dircotry doesn't exist"
 fi
-curr_date=$(date)
- echo "Date: $curr_date  +%+4Y-%m-%d"
+curr_date=$(date %+4Y-%m-%d)
+ echo "Date: $curr_date"
