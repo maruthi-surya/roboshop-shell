@@ -4,7 +4,7 @@ echo "Script execution started: $(date)"
 dir_path=$(pwd)/logs #get the current working directory
    echo "dir-path: $dir_path"
 
-dest_dir=$(pwd)/dest/
+dest_dir=$(pwd)/dest
  if [ ! -d $dest_dir ]; then
   echo "dest directory doesn't exist"
   exit 1
