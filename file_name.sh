@@ -29,7 +29,7 @@ LOG_FILE="$dir_path/$file-$curr_date.log" # appending filename to the directory
 
 if [ -f $LOG_FILE ]; then
    echo "files found"
-   files=(find $dir_path -name "*.log" | zip -@ -j $zip_path)
+   find $dir_path -name "*.log" -type f | zip -@ -j "$zip_path"
 else
   echo "no files found nothing to archive"
   exit 1
