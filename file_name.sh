@@ -7,7 +7,7 @@ dir_path=$(pwd)/logs #get the current working directory
 dest_dir=$(pwd)/dest
  if [ ! -d $dest_dir ]; then
   echo "dest directory doesn't exist"
-  eixt 1
+  exit 1
 fi
 
 if [ -d $dir ]; then
